@@ -4,7 +4,7 @@ const Joi = require("joi");
 const bcrypt = require("bcrypt");
 const { send } = require("process");
 
-router.post("/", async (req, res) => {
+router.post("/auth", async (req, res) => {
 	try {
 		const {error} = validate(req.body);
 		if (error)
